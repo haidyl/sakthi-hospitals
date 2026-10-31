@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+<meta charset="UTF-8">
+<title>சக்தி மருத்துவமனை</title>
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400..800&family=Kavivanar&family=Meera+Inimai&family=Mukta+Malar:wght@200;300;400;500;600;700;800&family=Noto+Sans+Tamil:wght@100..900&display=swap');
+
+
+
+  :root{
+    --rose-deep:#a3134a;
+    --rose-sutle:#a34066;
+    --rose:#d6196f;
+    --rose-soft:#f8d9e6;
+    --pink-bg:#fff5f9;
+    --gold:#c99a3a;
+    --green:#1f7a4d;
+    --green-soft:#e6f4ec;
+    --blue-soft:#e5f0fb;
+    --ink:#3a2233;
+    --card-line:#f0c3d8;
+    --blue-deep:#07246e; /*#0015538*/
+  }
+
+ 
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:'Noto Sans Tamil','Noto Sans',sans-serif;
+    background:var(--pink-bg);
+    color:var(--ink);
+  }
+
+  .bold{
+    font-weight: bold;
+  }
+
+  .pink{
+    color: var(--rose-deep) !important;;
+  }
+
+  .center{
+    text-align: center;
+  }
+
+  .ml-5{
+    margin-left:48%;
+    font-size: smaller;
+  }
+
+  .poster{
+    width:900px; /*1748px*/
+ /*    width:148mm;
+    height:210mm; */
+    margin:0 auto;
+    background:#ffffff;
+    border:1px dotted var(--rose);
+    box-shadow:0 0 0 8px #ffffff, 0 0 0 9px var(--rose-soft);
+  }
+
+  /* ---------- HEADER ---------- */
+  .header{
+    padding:22px 30px 16px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:3px solid var(--rose-soft);
+  }
+  .brand-left{
+    display:flex;
+    align-items:center;
+    gap:14px;
+  }
+  .logo-badge{
+/*     width:64px;height:64px; */
+    border-radius:50%;
+    /* background:radial-gradient(circle at 30% 30%, #ffe3ef, var(--rose));
+    border:3px solid var(--rose-deep); */
+    display:flex;align-items:center;justify-content:center;
+ /*    flex-shrink:0; */
+    background-image: url(https: //raw .githubusercontent .com/haidyl/sakthi hospitals/refs/heads/main/raw_files/Sakthi_Blue_150.png);
+  }
+ /*  .logo-badge svg{width:34px;height:34px;}
+  .brand-text .name{
+    font-size:32px;
+    font-weight:800;
+    color:var(--rose-deep);
+    line-height:1.15;
+  } */
+
+.brand-text{
+text-align: center;
+color:var(--blue-deep);
+margin-left:8px;
+}
+
+  .brand-text .sub{
+    font-size:14px;
+    color:var(--rose-deep);
+    font-weight:400;
+    letter-spacing:.5px;
+    padding:12px;
+    /* text-transform: uppercase; */
+  }
+
+  .brand-text .taglines{
+    font-size:18px;
+    color:var(--rose-deep);
+    font-weight:400;
+    letter-spacing:.5px;
+    padding-top:16px;
+}
+
+  .flower-deco svg{width:145px;height:90px;}
+
+  /* ---------- HERO / TAGLINE ---------- */
+  .hero{
+    padding:18px 30px 6px;
+    text-align:center;
+  }
+  .hero .headline{
+    font-size:26px;
+    font-weight:800;
+    color:var(--rose-deep);
+    line-height:1.4;
+    padding-bottom: 10px;
+  }
+  .hero .line{
+    font-size:15px;
+    color:var(--ink);
+    margin-top:4px;
+    font-weight:500;
+  }
+  .phone-pill{
+    display:inline-block;
+    margin-top:12px;
+    background:var(--rose-deep);
+    color:#fff;
+    font-weight:700;
+    font-size:18px;
+    padding:8px 26px;
+    border-radius:30px;
+    letter-spacing:1px;
+  }
+    .phone-pill2{
+    display:inline-block;
+    margin-top:12px;
+    background:var(--rose-sutle);
+    color:#fff;
+    font-weight:700;
+    font-size:21px;
+    padding:8px 26px;
+    border-radius:30px;
+    letter-spacing:1px;
+    border: #fff;
+  }
+
+  /* ---------- DOCTOR TABLE ---------- */
+
+
+.main-content{
+  display: flex;
+    flex-direction:row;
+}
+
+  .doctors{
+    margin:20px 26px 6px;
+    border:2px solid var(--rose-soft);
+    border-radius:10px;
+    overflow:hidden;
+    width:80%;
+  }
+  .doc-row{
+    display:flex;
+    align-items:flex-start;
+    gap:14px;
+    padding:14px 18px;
+    border-bottom:1px solid var(--rose-soft);
+  }
+  .doc-row:last-child{border-bottom:none;}
+  .doc-row:nth-child(even){background:var(--pink-bg);}
+  .doc-icon{
+    width:34px;height:34px;flex-shrink:0;margin-top:2px;
+  }
+  .doc-icon svg{width:100%;height:100%;}
+  .doc-name{
+    font-weight:700;
+    font-size:16.5px;
+    color:var(--rose-deep);
+  }
+  .doc-qual{
+    font-weight:600;
+    font-size:15px;
+    color:#3a2233;
+  }
+  .doc-role{
+    font-size:14px;
+    margin-top:3px;
+    color:var(--ink);
+  }
+
+
+.image-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.image-content img{
+  width:85;
+}
+
+    /* Container to stack images vertically */
+    .image-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px; /* Space between images */
+      padding: 20px;
+    }
+
+    /* The core styling to make any image perfectly round */
+    .round-img {
+      width: 85px;       /* Set a fixed width */
+      height: 85px;      /* Set an equal fixed height (must be a 1:1 square) */
+      object-fit: cover;  /* Prevents the image from stretching or distorting */
+      border-radius: 50%; /* Cuts the square into a perfect circle */
+      border: 3px solid #cbd5e1; /* Optional: Adds a clean border ring */
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Optional: Adds a soft shadow */
+    }
+
+
+  /* ---------- SECTION LABEL ---------- */
+  .section-label{
+    text-align:center;
+    margin:26px 0 12px;
+  }
+  .section-label span{
+    display:inline-block;
+    background:var(--rose-deep);
+    color:#fff;
+    font-weight:700;
+    font-size:17px;
+    padding:7px 34px;
+    border-radius:22px;
+    letter-spacing:.5px;
+  }
+
+  /* ---------- SERVICE CARDS ---------- */
+  .services{
+    display:flex;
+    gap:14px;
+    padding:0 26px;
+    margin-bottom:8px;
+  }
+  .service-card{
+    flex:1;
+    border:2px solid var(--card-line);
+    border-radius:12px;
+    padding:14px 14px 16px;
+    background:#fffafc;
+  }
+  .service-card .icon-wrap{
+    width:44px;height:44px;
+    border-radius:50%;
+    background:var(--rose-soft);
+    display:flex;align-items:center;justify-content:center;
+    margin-bottom:8px;
+  }
+  .service-card .icon-wrap svg{width:40px;height:40px;}
+  .service-card h3{
+    margin:0 0 8px;
+    font-size:16px;
+    color:var(--rose-deep);
+    font-weight:700;
+  }
+  .service-card ul{
+    margin:0;padding-left:18px;
+    font-size:12.5px;
+    line-height:1.65;
+    color:var(--ink);
+  }
+
+  /* ---------- CONTACT STRIP ---------- */
+  .contact-strip{
+    display:flex;
+    margin:26px 26px 0;
+    border-radius:12px;
+    overflow:hidden;
+    border:2px solid var(--rose-soft);
+  }
+  .contact-col{
+    flex:1;
+    padding:16px 16px;
+    font-size:13px;
+    line-height:1.6;
+  }
+  .contact-col:nth-child(1){background:var(--blue-soft);}
+  .contact-col:nth-child(2){
+    background:var(--rose-deep);
+    color:#fff;
+    text-align:center;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+  }
+  .contact-col:nth-child(3){background:var(--blue-soft);}
+  .contact-col h4{
+    margin:0 0 6px;
+    font-size:14px;
+    font-weight:700;
+    color:var(--rose-deep);
+  }
+  .contact-col:nth-child(3) h4{color:var(--rose-deep);}
+  .contact-col:nth-child(2) .tlabel{
+    font-size:13px;font-weight:600;opacity:.9;margin-bottom:6px;
+  }
+  .contact-col:nth-child(2) .tnum{
+    font-size:22px;font-weight:800;letter-spacing:1px;
+  }
+ .contact-col:nth-child(2) .ticon{
+    font-size:22px;font-weight:800;letter-spacing:1px;line-height: 2px;
+  }
+  
+  .branch-text{
+    text-align: center;
+    color:var(--blue-deep);
+}
+
+  /* ---------- FOOTER ---------- */
+  .footer{
+    text-align:center;
+    padding:16px 20px 22px;
+    font-size:12px;
+    color:var(--rose-deep);
+  }
+  .footer .tag{
+    font-weight:700;
+    color:var(--rose-deep);
+    font-size:14px;
+    margin-bottom:4px;
+  }
+
+.kavivanar-regular {
+  font-family: "Kavivanar", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+.meera-inimai-regular {
+  font-family: "Meera Inimai", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 52px;
+}
+.baloo-thambi-2-regular {
+  font-family: "Baloo Thambi 2", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+.mukta-malar-extralight {
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.mukta-malar-light {
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.mukta-malar-regular {
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.mukta-malar-medium {
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.mukta-malar-semibold {
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.mukta-malar-bold {
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.mukta-malar-extrabold {
+  font-family: "Mukta Malar", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.noto-sans-tamil-regular {
+  font-family: "Noto Sans Tamil", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+</style>
+</head>
+<body>
+<div class="poster">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="brand-left">
+      
+       <a href="#"></a><div class="logo-badge">
+        <img src="https://raw.githubusercontent.com/haidyl/sakthi-hospitals/refs/heads/main/raw_files/Sakthi_Blue_150.png">
+       
+       <!--  <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 21s-6.5-4.35-9-8.5C1 9 2.5 5.5 6 5.5c2 0 3.5 1.3 4 2.5.5-1.2 2-2.5 4-2.5 3.5 0 5 3.5 3 7-2.5 4.15-9 8.5-9 8.5z"/>
+        </svg> -->
+      </div></a>
+      <div class="brand-text">
+        <div class="name content-center meera-inimai-regular">சக்தி மருத்துவமனை</div>
+       <!--  <div class="sub">~ Better health begins with dedicated care and compassion ~</div> -->
+         <div class="taglines kavivanar-regular">
+         <div>சிறந்த மருத்துவப் பராமரிப்பு</div>
+         <div>வாழ்க்கையின் ஒவ்வொரு பருவத்திறகும்</div></div>
+      </div>
+    </div>
+    <div class="flower-deco">
+      <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="#d6196f" width="800px" height="800px" viewBox="0 0 512 512"><path d="M320.2 243.8l-49.7 99.4c-6 12.1-23.4 11.7-28.9-.6l-56.9-126.3-30 71.7H60.6l182.5 186.5c7.1 7.3 18.6 7.3 25.7 0L451.4 288H342.3l-22.1-44.2zM473.7 73.9l-2.4-2.5c-51.5-52.6-135.8-52.6-187.4 0L256 100l-27.9-28.5c-51.5-52.7-135.9-52.7-187.4 0l-2.4 2.4C-10.4 123.7-12.5 203 31 256h102.4l35.9-86.2c5.4-12.9 23.6-13.2 29.4-.4l58.2 129.3 49-97.9c5.9-11.8 22.7-11.8 28.6 0l27.6 55.2H481c43.5-53 41.4-132.3-7.3-182.1z"/></svg> -->
+
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#d6196f" version="1.1" id="Capa_1" width="800px" height="800px" viewBox="0 0 486.572 486.572" xml:space="preserve">
+<g>
+	<g id="icons_19_">
+		<g>
+			<path d="M391.606,370.298c-22.201,21.519-104.689,43.527-161.185,42.101c-9.299-0.233-12.175-14.386,0.701-14.611     c26.462-0.464,30.711,2.057,86.074-10.106c14.573-3.2,27.807-5.569,35.901-11.917c12.535-9.826,10.527-33.38-11.857-37.947     c-26.67-5.442-66.065,0.55-90.462,0.55c-24.395,0-33.774-17.1-68.936-14.762c-52.021,3.458-62.769,8.709-85.3,13.077v-2.137     c0-10.653-8.248-19.292-18.42-19.292H55.788c-10.174,0-18.42,8.639-18.42,19.292v106.821c0,10.652,8.246,19.29,18.42,19.29     h22.337c10.172,0,18.42-8.638,18.42-19.29v-1.908c17.8,11.406,80.444,47.862,152.875,47.103     c85.837-0.904,196.938-73.28,199.648-103.099C451.778,353.644,413.806,348.777,391.606,370.298z" style="fill:lightsteelblue"/>
+			<path d="M430.784,25.915h-22.337c-10.173,0-18.42,8.638-18.42,19.29v1.908C372.227,35.707,309.583-0.751,237.152,0.012     C151.315,0.916,40.216,73.292,37.504,103.109c-2.71,29.816,35.263,34.683,57.463,13.165     c22.201-21.519,104.688-43.527,161.182-42.103c9.3,0.234,12.176,14.385-0.699,14.612c-26.463,0.466-30.712-2.055-86.075,10.108     c-14.573,3.2-27.807,5.569-35.902,11.916c-12.537,9.825-10.527,33.379,11.858,37.948c26.67,5.442,66.066-0.549,90.462-0.549     c24.395,0,33.774,17.098,68.937,14.76c52.021-3.459,62.769-8.709,85.3-13.077v2.137c0,10.654,8.247,19.292,18.42,19.292h22.337     c10.174,0,18.42-8.638,18.42-19.292V45.205C449.204,34.553,440.958,25.915,430.784,25.915z" style="fill:lightsteelblue"/>
+			<path d="M283.415,176.925c-12.938,0-24.664,5.163-33.254,13.531c-8.59-8.368-20.316-13.531-33.254-13.531     c-26.332,0-47.678,21.345-47.678,47.677c0,10.221,3.228,19.683,8.704,27.444c2.181,3.412,4.802,6.515,7.787,9.226l49.457,49.532     c4.952,4.953,9.906,9.906,14.859,9.906c0.041,0,0.083-0.007,0.124-0.007s0.083,0.007,0.124,0.007     c4.953,0,9.906-4.953,14.858-9.906l49.457-49.532c2.985-2.711,5.606-5.812,7.787-9.226c5.478-7.763,8.704-17.224,8.704-27.444     C331.093,198.269,309.747,176.925,283.415,176.925z" style="fill:#d6196f"/>
+		</g>
+	</g>
+</g>
+</svg>
+<!--       <svg viewBox="0 0 64 64" fill="none">
+        <g fill="#d6196f" opacity="0.85">
+          <circle cx="32" cy="16" r="10"/>
+          <circle cx="32" cy="48" r="10"/>
+          <circle cx="16" cy="32" r="10"/>
+          <circle cx="48" cy="32" r="10"/>
+        </g>
+        <circle cx="32" cy="32" r="8" fill="#c99a3a"/>
+      </svg> -->
+
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="headline">பெண்கள், குழந்தைகள் மற்றும் எலும்பு நல பராமரிப்ப்பு</div><br>
+    <div class="line">அக்கறையுடன் கூடிய சிகிச்சை</div>
+    <div class="line">ஆரோக்கியமான, மகிழ்ச்சியான எதிர்காலத்திற்கு அர்ப்பணிப்பு</div><br>
+    <!-- <div class="phone-pill">தொலைபேசி எண்: 78688 66444</div> -->
+  </div>
+
+  <div class="main-content">
+  <!-- DOCTORS -->
+  <div class="doctors">
+    <div class="doc-row">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d6196f" stroke-width="1.8">
+          <path d="M6 3v6a4 4 0 0 0 8 0V3M10 21a5 5 0 0 1-5-5v-2M14 21a5 5 0 0 0 5-5v-2" stroke-linecap="round"/>
+          <circle cx="19" cy="8" r="2"/>
+
+        </svg>
+      </div>
+      <div>
+        <div class="doc-name">டாக்டர். S. வெங்கடேஸ்வரன்
+          <span class="doc-qual">M.B.B.S., M.D., DCH, DMRD, DHSc (Diabetes)</span>
+        </div>
+        <div class="doc-role">சிறுவர் நல மருத்துவர் &nbsp;|&nbsp; சக்கரை நோய் மற்றும் உட்புறுப்பு நிபுணர்</div>
+      </div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d6196f" stroke-width="1.8">
+          <path d="M6 3v6a4 4 0 0 0 8 0V3M10 21a5 5 0 0 1-5-5v-2M14 21a5 5 0 0 0 5-5v-2" stroke-linecap="round"/>
+          <circle cx="19" cy="8" r="2"/>
+        </svg>
+      </div>
+      <div>
+        <div class="doc-name">டாக்டர். G. ராதாருக்மணி 
+          <span class="doc-qual">M.B.B.S., DGO., DHSc (Diabetes)</span>
+        </div>
+        <div class="doc-role">மகப்பேறு மற்றும் மகளிர் நல மருத்துவர் &nbsp;|&nbsp; சக்கரை நோய் மற்றும் மகளிர் உட்புறுப்பு நிபுணர்</div>
+      </div>
+    </div>
+
+    <div class="doc-row">
+      <div class="doc-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#d6196f" stroke-width="1.8">
+          <path d="M6 3v6a4 4 0 0 0 8 0V3M10 21a5 5 0 0 1-5-5v-2M14 21a5 5 0 0 0 5-5v-2" stroke-linecap="round"/>
+          <circle cx="19" cy="8" r="2"/>
+        </svg>
+           
+      </div>
+      <div>
+        <div class="doc-name">டாக்டர். V. ஜனார்த்தனன்
+          <span class="doc-qual">M.B.B.S., D.Ortho., DNB (Ortho)</span>
+        </div>
+        <div class="doc-role">எலும்பு மற்றும் மூட்டு அறுவை சிகிச்சை நிபுணர் &nbsp;|&nbsp; மூட்டு மாற்று அறுவை சிகிச்சை நிபுணர்</div>
+      </div>
+    </div>
+
+  </div><!--Doctors-->
+
+  
+  <div class="image-content">
+
+       
+   
+    
+
+    <div class="column-container">
+  <!-- Placeholder 1: Baby -->
+  <div class="round-placeholder">
+    <div class="inner-content"> <img class="round-img" src="https://raw.githubusercontent.com/haidyl/sakthi-hospitals/refs/heads/main/raw_files/image_abb7fb6b.png" alt="Baby with stethoscope"></div>
+  </div>
+
+  <!-- Placeholder 2: Pregnant Woman -->
+  <div class="round-placeholder">
+    <div class="inner-content"> <img class="round-img" src="https://raw.githubusercontent.com/haidyl/sakthi-hospitals/refs/heads/main/raw_files/pregnant_woman.png" alt="Pregnant woman"></div>
+  </div>
+
+  <!-- Placeholder 3: Knee -->
+  <div class="round-placeholder">
+    <div class="inner-content"><img class="round-img" src="https://raw.githubusercontent.com/haidyl/sakthi-hospitals/refs/heads/main/raw_files/image_924a105e.png" alt="Knee joint anatomy"></div>
+  </div>
+</div>
+      </div>
+
+</div><!--Main Content-->
+
+  <!-- SECTION LABEL -->
+  <div class="section-label"><span>சிறப்பு பிரிவுகள்</span></div>
+
+  <!-- SERVICE CARDS -->
+  <div class="services">
+    <div class="service-card">
+      <div class="icon-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#d6196f" height="800px" width="800px" version="1.1" id="Capa_1" viewBox="0 0 297.04 297.04" xml:space="preserve">
+<g>
+	<path d="M79.239,137.926c8.957,0,17.604,2.788,24.822,7.729c7.219-4.941,15.866-7.729,24.822-7.729c0.158,0,0.314,0.01,0.472,0.012   c-3.3-2.586-6.255-5.65-8.732-9.148c-5.172-7.302-7.895-15.96-8.04-24.699c-8.22-3.033-15.469-8.493-20.654-15.814   c-3.022-4.266-5.217-8.944-6.553-13.842c-20.468,7.83-35.056,28.146-35.056,51.981c0,6.923,1.241,13.544,3.489,19.655   C60.991,140.951,69.765,137.926,79.239,137.926z"/>
+	<path d="M128.883,152.926c-10.546,0-19.77,5.647-24.822,14.08c-5.052-8.433-14.277-14.08-24.822-14.08   c-15.972,0-28.919,12.947-28.919,28.919c0,6.418,2.091,12.347,5.628,17.143c14.943,20.261,23.05,44.792,23.05,69.967v18.223   c0,5.446,4.415,9.861,9.861,9.861h30.405c5.446,0,9.861-4.415,9.861-9.861v-18.223c0-25.256,8.059-49.642,23.05-69.967   c3.538-4.796,5.629-10.725,5.629-17.143C157.802,165.874,144.855,152.926,128.883,152.926z"/>
+	<path d="M244.906,28.974L227.332,4.162C225.41,1.449,222.367,0,219.277,0c-1.971,0-3.961,0.589-5.691,1.815l-14.871,10.533   c-19.983,14.154-43.681,21.653-68.121,21.653c-0.766,0-1.531-0.007-2.298-0.022c-0.186-0.003-0.372-0.005-0.557-0.005   c-5.778,0-11.611,1.727-16.685,5.321c-13.034,9.231-16.116,27.281-6.884,40.314c5.636,7.958,14.56,12.203,23.622,12.203   c0.738,0,1.476-0.028,2.214-0.085c-3.961,8.997-3.238,19.788,2.857,28.394c5.637,7.958,14.561,12.206,23.624,12.206   c5.78,0,11.615-1.727,16.69-5.322c5.237-3.709,8.867-8.842,10.736-14.501c7.897-23.905,23.23-44.699,43.774-59.25l14.871-10.533   C247.003,39.572,248.053,33.418,244.906,28.974z M130.98,56.751c-4.49,0-8.143,3.652-8.143,8.142c0,4.143-3.357,7.5-7.5,7.5   s-7.5-3.357-7.5-7.5c0-12.761,10.382-23.142,23.143-23.142c4.143,0,7.5,3.357,7.5,7.5C138.48,53.394,135.123,56.751,130.98,56.751z   "/>
+</g>
+</svg>
+        <!-- <svg viewBox="0 0 24 24" fill="none" stroke="#d6196f" stroke-width="2" stroke-linecap="round">
+          <path d="M6 12l3-8 3 6 3-6 3 8"/><path d="M4 16h16v4H4z"/>
+        </svg> -->
+      </div>
+      <h3>எலும்பு &amp; மூட்டு (Ortho)</h3>
+      <ul>
+        <li>மூட்டு வலி சிகிச்சை</li>
+        <li>விலாகட்டு காயங்கள்</li>
+        <li>எலும்பு முறிவு சிகிச்சை</li>
+        <li>எலும்பு தொற்று &amp; மூட்டு மாற்று சிகிச்சை</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap">
+<!--         <svg viewBox="0 0 24 24" fill="none" stroke="#d6196f" stroke-width="2" stroke-linecap="round">
+          <path d="M12 21s-6.5-4.35-9-8.5C1 9 2.5 5.5 6 5.5c2 0 3.5 1.3 4 2.5.5-1.2 2-2.5 4-2.5 3.5 0 5 3.5 3 7-2.5 4.15-9 8.5-9 8.5z"/>
+        </svg> -->
+        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 48 48" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M27.0393 34.2634C26.9946 35.0584 26.5057 38.475 26.4124 39.1223H25.0058V44.0111H36.0058V39.1223H34.5964C35.3313 37.9803 36.127 37.1746 36.9303 36.3611C37.7995 35.481 38.6775 34.5918 39.497 33.2582C39.7029 32.923 39.9116 32.6011 40.1139 32.289L40.1139 32.2889C40.8444 31.1619 41.4919 30.1629 41.6286 29.1312C41.8032 27.8139 42.0478 19.8971 41.6591 18.6909C41.2704 17.4848 38.909 16.7678 38.0376 19.4343C37.6075 20.7501 37.4472 22.4499 37.3018 23.9916L37.3017 23.9916C37.1524 25.5743 37.0189 26.9903 36.6254 27.6529C35.8486 28.9608 33.365 32.2022 33.365 32.2022L35.5317 28.1267C35.5317 28.1267 35.8611 27.563 35.7143 26.4785C35.5676 25.394 34.3368 23.8568 33.7219 25.0472C33.107 26.2377 32.0518 27.3013 32.0518 27.3013L28.3101 31.8031C28.3101 31.8031 27.0888 33.3841 27.0393 34.2634ZM20.9767 34.2635C21.0214 35.0585 21.5103 38.4751 21.6036 39.1223H23.0102V44.0112H12.0102V39.1223H13.4196C12.6847 37.9804 11.889 37.1747 11.0857 36.3612C10.2165 35.4811 9.33849 34.5919 8.51902 33.2583C8.31306 32.9231 8.10439 32.6011 7.90209 32.289L7.90208 32.289C7.17155 31.1619 6.52407 30.163 6.38735 29.1313C6.21278 27.814 5.96818 19.8972 6.3569 18.691C6.74561 17.4849 9.10695 16.7679 9.97843 19.4344C10.4084 20.7502 10.5688 22.45 10.7142 23.9917L10.7142 23.9917C10.8636 25.5744 10.9971 26.9904 11.3906 27.6529C12.1674 28.9609 14.651 32.2023 14.651 32.2023L12.4843 28.1268C12.4843 28.1268 12.1549 27.5631 12.3016 26.4786C12.4484 25.3941 13.6791 23.8569 14.2941 25.0473C14.909 26.2378 15.9642 27.3014 15.9642 27.3014L19.7059 31.8032C19.7059 31.8032 20.9272 33.3842 20.9767 34.2635Z" fill="#d6196f"/>
+<path d="M31.7288 11C33.938 11 35.7288 9.20918 35.7288 7C35.7288 4.79091 33.938 3 31.7288 3C29.5197 3 27.7288 4.79091 27.7288 7C27.7288 9.20918 29.5197 11 31.7288 11Z" fill="#d6196f"/>
+<path d="M33.7028 14.8414H32.3276L30.0553 12.5661C29.6939 11.9871 29.1903 11.5103 28.5925 11.1809C27.9946 10.8516 27.3225 10.6807 26.6399 10.6846H22.2722L22.6881 18.9981H26.429C26.9838 18.9973 27.5328 18.885 28.0433 18.6677C28.5537 18.4504 29.0152 18.1327 29.4004 17.7334L30.0413 18.3753C30.2373 18.5771 30.4731 18.736 30.7336 18.8422C30.9942 18.9484 31.2739 18.9994 31.5551 18.9921C31.5792 18.9921 31.6003 18.9981 31.6244 18.9981H33.7028C34.2541 18.9981 34.7826 18.7791 35.1724 18.3894C35.5621 17.9996 35.7811 17.4709 35.7811 16.9197C35.7811 16.3686 35.5621 15.8399 35.1724 15.4501C34.7826 15.0604 34.2541 14.8414 33.7028 14.8414Z" fill="#d6196f"/>
+<path d="M18.2441 12.7631L16.1657 14.8414H13.7549C13.2037 14.8414 12.675 15.0604 12.2853 15.4502C11.8955 15.8399 11.6765 16.3686 11.6765 16.9198C11.6765 17.471 11.8955 17.9997 12.2853 18.3894C12.675 18.7792 13.2037 18.9982 13.7549 18.9982H16.8689C16.894 18.9982 16.9151 18.9982 16.9392 18.9921C17.2205 18.9993 17.5002 18.9481 17.7606 18.842C18.0212 18.7359 18.2569 18.577 18.4531 18.3754L21.1542 15.6732C21.3455 15.4819 21.4973 15.2548 21.6007 15.0049C21.7043 14.755 21.7576 14.4871 21.7576 14.2166C21.7576 13.9461 21.7043 13.6783 21.6007 13.4284C21.4973 13.1784 21.3455 12.9513 21.1542 12.7601C20.963 12.5688 20.7359 12.417 20.486 12.3135C20.2361 12.21 19.9682 12.1567 19.6977 12.1567C19.4271 12.1567 19.1593 12.21 18.9094 12.3135C18.6595 12.417 18.4324 12.5688 18.2411 12.7601L18.2441 12.7631Z" fill="#d6196f"/>
+</svg>
+      </div>
+      <h3>சிறுவர் நலம் &amp; ஆஸ்துமா</h3>
+      <ul>
+        <li>சிறுவர் நலம் பராமரிப்பு</li>
+        <li>வளர்ச்சி கண்காணிப்பு</li>
+        <li>தடுப்பூசி ஆலோசனை</li>
+        <li>சிறுவர் நல நிபுணர் ஆலோசனை</li>
+      </ul>
+    </div>
+
+    <div class="service-card">
+      <div class="icon-wrap">
+        <svg xmlns="http://www.w3.org/2000/svg" width="800px" height="800px" viewBox="0 0 48 48" fill="none">
+<g clip-path="url(#clip0)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M36.7279 36.728C29.6985 43.7575 18.3015 43.7575 11.2721 36.728C5.27491 30.7308 4.39423 21.5547 8.63003 14.6239L13.8857 12.9346C16.3783 12.1334 18.2392 15.2535 16.3497 17.0658C13.4018 19.8934 15.4802 24.8676 19.5635 24.7573L20.5971 24.7293C21.9323 24.6932 23.1156 25.5836 23.4508 26.8765L23.5806 27.3771C23.2491 27.3451 22.9067 27.3683 22.5653 27.4536L16.9084 28.8679C15.301 29.2697 14.3237 30.8985 14.7256 32.5059C15.1274 34.1133 16.7562 35.0906 18.3636 34.6887L21.11 34.0021L21.7967 36.7485C22.1608 38.2053 23.546 39.1684 25.0384 39.0026C32.8577 38.1338 36.4445 32.5927 37.4156 30.0032C37.7754 29.0437 37.6205 27.9669 37.005 27.1477C36.3894 26.3285 35.3982 25.8801 34.3765 25.9587L32.3063 26.1179L31.5066 22.9189C31.1048 21.3116 29.4759 20.3343 27.8686 20.7361C26.2612 21.138 25.2839 22.7668 25.6857 24.3742L27.1 30.031C27.2827 30.7621 27.7234 31.3703 28.3071 31.773C27.8976 32.0135 27.4479 32.2338 26.955 32.4234L25.3868 26.3745C24.8178 24.18 22.8093 22.6688 20.5431 22.73L19.5095 22.758C17.2538 22.8189 16.1057 20.0712 17.7341 18.5092C21.1546 15.2284 17.7859 9.58015 13.2737 11.0305L10.7167 11.8524C10.8967 11.6559 11.0818 11.4624 11.2721 11.2722C18.3015 4.24273 29.6985 4.24273 36.7279 11.2722C43.7574 18.3016 43.7574 29.6986 36.7279 36.728ZM38.1421 38.1422C30.3317 45.9527 17.6683 45.9527 9.85786 38.1422C2.04738 30.3317 2.04738 17.6684 9.85786 9.85796C17.6684 2.04747 30.3316 2.04747 38.1421 9.85796C45.9526 17.6684 45.9526 30.3317 38.1421 38.1422ZM38.1421 22.5859C37.3611 23.3669 36.0948 23.3669 35.3137 22.5859C34.5327 21.8048 34.5327 20.5385 35.3137 19.7575C36.0948 18.9764 37.3611 18.9764 38.1421 19.7575C38.9232 20.5385 38.9232 21.8048 38.1421 22.5859ZM39.5563 24.0001C37.9943 25.5622 35.4616 25.5622 33.8995 24.0001C32.3374 22.438 32.3374 19.9053 33.8995 18.3432C35.4616 16.7811 37.9943 16.7811 39.5563 18.3432C41.1184 19.9053 41.1184 22.438 39.5563 24.0001ZM35.406 28.3491C35.2008 28.0761 34.8705 27.9266 34.5299 27.9528L31.6177 28.1768C31.1315 28.2142 30.6892 27.8954 30.5709 27.4223L29.5663 23.404C29.4324 22.8682 28.8894 22.5425 28.3536 22.6764C27.8178 22.8104 27.4921 23.3533 27.626 23.8891L29.0402 29.5459C29.1585 30.0191 29.6008 30.3379 30.0871 30.3005L30.5563 30.2644C30.9777 30.232 31.3739 30.468 31.5462 30.8539C31.7184 31.2399 31.6294 31.6924 31.3238 31.9844C30.1754 33.0818 28.5793 34.1235 26.4477 34.6851C26.1891 34.7532 25.914 34.7149 25.6839 34.5788C25.4537 34.4427 25.2876 34.22 25.2228 33.9606L24.263 30.1215C24.1291 29.5857 23.5861 29.26 23.0503 29.3939L17.3935 30.8081C16.8577 30.9421 16.5319 31.485 16.6659 32.0208C16.7998 32.5566 17.3428 32.8824 17.8786 32.7484L21.5951 31.8193C21.8524 31.755 22.1247 31.7955 22.3522 31.9319C22.5796 32.0684 22.7435 32.2896 22.8078 32.5469L23.7369 36.2635C23.8583 36.749 24.32 37.0701 24.8175 37.0148C31.6643 36.2541 34.7468 31.424 35.5429 29.301C35.6628 28.9811 35.6112 28.6222 35.406 28.3491Z" fill="#d6196f"/>
+</g>
+<defs>
+<clipPath id="clip0">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>
+        <!-- <svg viewBox="0 0 24 24" fill="none" stroke="#d6196f" stroke-width="2" stroke-linecap="round">
+          <circle cx="12" cy="8" r="4"/><path d="M6 21v-2a6 6 0 0 1 12 0v2"/>
+        </svg> -->
+      </div>
+      <h3>மகப்பேறு &amp; பெண்கள் நலம் (OBG)</h3>
+      <ul>
+        <li>கர்ப்ப கால பராமரிப்பு</li>
+        <li>இயல்பான பிரசவம்</li>
+        <li>அதிக அபாய கர்ப்பம்</li>
+        <li>மகளிர் நல ஆலோசனை &amp; மகளிர் அறுவை சிகிச்சை</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+    <div class="contact-col">
+      <h4>கிளை – 1</h4>
+      எண். 5, பரமசிவம் வீதி,<br>
+      பாத்திமா கல்லூரி எதிர்புறம்,<br>
+      மதுரை – 625018.<br><br><span class="brand-text bold">பார்வை நேரம்:</span> <span class="branch-text pink"><Span class="center"><svg xmlns="http://www.w3.org/2000/svg" fill="#d6196f" width="20px" height="20px" viewBox="0 0 24 24" id="Layer_1" data-name="Layer 1"><path d="M14.6,21.3c-.3.226-.619.464-.89.7H16a1,1,0,0,1,0,2H12a1,1,0,0,1-1-1c0-1.5,1.275-2.456,2.4-3.3.75-.562,1.6-1.2,1.6-1.7a1,1,0,0,0-2,0,1,1,0,0,1-2,0,3,3,0,0,1,6,0C17,19.5,15.725,20.456,14.6,21.3ZM23,15a1,1,0,0,0-1,1v3H21a1,1,0,0,1-1-1V16a1,1,0,0,0-2,0v2a3,3,0,0,0,3,3h1v2a1,1,0,0,0,2,0V16A1,1,0,0,0,23,15ZM13,12V7a1,1,0,0,0-2,0v4H8a1,1,0,0,0,0,2h4A1,1,0,0,0,13,12ZM23,2a1,1,0,0,0-1,1V5.374A12,12,0,1,0,7.636,23.182,1.015,1.015,0,0,0,8,23.25a1,1,0,0,0,.364-1.932A10,10,0,1,1,20.636,7H18a1,1,0,0,0,0,2h3a3,3,0,0,0,3-3V3A1,1,0,0,0,23,2Z"/></svg></Span> மணி நேரம்</span>
+    </div>
+    <div class="contact-col flex-direction">
+        <span class="ticon"><svg xmlns="http://www.w3.org/2000/svg" width="50px" height="50px" viewBox="0 0 24 24" fill="none">
+<path d="M15.5562 14.5477L15.1007 15.0272C15.1007 15.0272 14.0181 16.167 11.0631 13.0559C8.10812 9.94484 9.1907 8.80507 9.1907 8.80507L9.47752 8.50311C10.1841 7.75924 10.2507 6.56497 9.63424 5.6931L8.37326 3.90961C7.61028 2.8305 6.13596 2.68795 5.26145 3.60864L3.69185 5.26114C3.25823 5.71766 2.96765 6.30945 3.00289 6.96594C3.09304 8.64546 3.81071 12.259 7.81536 16.4752C12.0621 20.9462 16.0468 21.1239 17.6763 20.9631C18.1917 20.9122 18.6399 20.6343 19.0011 20.254L20.4217 18.7584C21.3806 17.7489 21.1102 16.0182 19.8833 15.312L17.9728 14.2123C17.1672 13.7486 16.1858 13.8848 15.5562 14.5477Z" fill="#fff"/>
+<path d="M13.2595 1.87983C13.3257 1.47094 13.7122 1.19357 14.1211 1.25976C14.1464 1.26461 14.2279 1.27983 14.2705 1.28933C14.3559 1.30834 14.4749 1.33759 14.6233 1.38082C14.9201 1.46726 15.3347 1.60967 15.8323 1.8378C16.8286 2.29456 18.1544 3.09356 19.5302 4.46936C20.906 5.84516 21.705 7.17097 22.1617 8.16725C22.3899 8.66487 22.5323 9.07947 22.6187 9.37625C22.6619 9.52466 22.6912 9.64369 22.7102 9.72901C22.7197 9.77168 22.7267 9.80594 22.7315 9.83125L22.7373 9.86245C22.8034 10.2713 22.5286 10.6739 22.1197 10.7401C21.712 10.8061 21.3279 10.53 21.2601 10.1231C21.258 10.1121 21.2522 10.0828 21.2461 10.0551C21.2337 9.9997 21.2124 9.91188 21.1786 9.79572C21.1109 9.56339 20.9934 9.21806 20.7982 8.79238C20.4084 7.94207 19.7074 6.76789 18.4695 5.53002C17.2317 4.29216 16.0575 3.59117 15.2072 3.20134C14.7815 3.00618 14.4362 2.88865 14.2038 2.82097C14.0877 2.78714 13.9417 2.75363 13.8863 2.7413C13.4793 2.67347 13.1935 2.28755 13.2595 1.87983Z" fill="#fff"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.4857 5.3293C13.5995 4.93102 14.0146 4.7004 14.4129 4.81419L14.2069 5.53534C14.4129 4.81419 14.4129 4.81419 14.4129 4.81419L14.4144 4.81461L14.4159 4.81505L14.4192 4.81602L14.427 4.81834L14.4468 4.8245C14.4618 4.82932 14.4807 4.8356 14.5031 4.84357C14.548 4.85951 14.6074 4.88217 14.6802 4.91337C14.8259 4.97581 15.0249 5.07223 15.2695 5.21694C15.7589 5.50662 16.4271 5.9878 17.2121 6.77277C17.9971 7.55775 18.4782 8.22593 18.7679 8.7154C18.9126 8.95991 19.009 9.15897 19.0715 9.30466C19.1027 9.37746 19.1254 9.43682 19.1413 9.48173C19.1493 9.50418 19.1555 9.52301 19.1604 9.53809L19.1665 9.55788L19.1688 9.56563L19.1698 9.56896L19.1702 9.5705C19.1702 9.5705 19.1707 9.57194 18.4495 9.77798L19.1707 9.57194C19.2845 9.97021 19.0538 10.3853 18.6556 10.4991C18.2607 10.6119 17.8492 10.3862 17.7313 9.99413L17.7276 9.98335C17.7223 9.96832 17.7113 9.93874 17.6928 9.89554C17.6558 9.8092 17.5887 9.66797 17.4771 9.47938C17.2541 9.10264 16.8514 8.53339 16.1514 7.83343C15.4515 7.13348 14.8822 6.73078 14.5055 6.50781C14.3169 6.39619 14.1757 6.32909 14.0893 6.29209C14.0461 6.27358 14.0165 6.26254 14.0015 6.25721L13.9907 6.25352C13.5987 6.13564 13.3729 5.72419 13.4857 5.3293Z" fill="#fff"/>
+</svg></span>
+      <div class="tnum">தொடர்புக்கு:</div>
+    
+      <div class="phone-pill2">78688 66444</div>
+    </div>
+    <div class="contact-col">
+      <h4>கிளை – 2</h4>
+      இராமநாயக்கன்பட்டி ரோடு, பேருராட்சி எதிர்புறம்,<br>
+      ஜேம்ஸ் & கோ.(அருகில்) , வாடிப்பட்டி,<br>
+      மதுரை – 625218.<br><br> 
+      <span class="branch-text bold">பார்வை நேரம்:</span> <span class="branch-text pink">மாலை 5PM to 7PM</span><br><span class="ml-5">(ஞாயிறு விடுமுறை)</span>
+    </div>
+    </div>
+
+   <!-- CONTACT STRIP -->
+  <div class="contact-strip">
+
+
+  </div>
+
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="tag">ஆரோக்கியமான எதிர்காலத்திற்கு முதல் படி எடுங்கள்</div>
+    உங்கள் குடும்பத்தின் நலனுக்காக அர்ப்பணிப்புடன் சேவை
+  </div>
+
+</div>
+</body>
+</html>
